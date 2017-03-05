@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.UsersMapper">
+	<insert id="addUsers" parameterType="Users">
+		insert into users(u_name,u_true_name,u_password)
+		values(#{u_name},#{u_true_name},#{u_password})
+	</insert>
+	<update id="updateUsers" parameterType="Users">
+		update users set
+		u_name=#{u_name},u_true_name=#{u_true_name},u_password=#{u_password} 
+	</update>
+	<select id="findUsers" resultType="Users">
+		select u_id,u_name,u_true_name,u_password from users where 1=1
+	</select>
+</mapper>

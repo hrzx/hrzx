@@ -1,0 +1,43 @@
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+$("#sbox").append($("<select id='pard1'></select>"));
+ $("<option value=''>请选择</option>").appendTo($("#pard1"));
+ $.grep(class_array,function(v){
+  if(v[2]==0)
+$("<option value='"+v[0]+"'>"+v[1]+"</option>").appendTo($("#pard1"));
+ }); 
+ $("#pard1").change(function(){  
+  if($("#pard2").length>0) $("#sbox select[id=pard2]").remove();
+  $("#sbox").append($("<select id='pard2'></select>"));
+  $("<option value=''>请选择</option>").appendTo($("#pard2"));
+  $.grep(class_array,function(v){
+   //alert($("#pard1").val());
+   if(v[2]==$("#pard1").val()) $("<option value='"+v[0]+"'>"+v[1]+"</option>").appendTo($("#pard2"));
+  });
+  
+  //alert($("#sbox").children().eq(1).attr("id"));
+ });
+ var dstate=false;
+ $("#pard2").change(function(){
+  //alert("22");
+  if($("#pard3").length>0) $("#sbox select[id=pard3]").remove();
+  dstate=false;
+  $.grep(class_array,function(v){
+   //alert($("#pard1").val());
+   if(v[2]==$("#pard2").val()){
+    //alert($("#pard2").val()); 
+    if(dstate==false){
+     $("#sbox").append($("<select id='pard3'></select>"));
+     $("<option value=''>请选择</option>").appendTo($("#pard3"));
+     dstate=true;
+    }
+    $("<option value='"+v[0]+"'>"+v[1]+"</option>").appendTo($("#pard3"));
+   }
+  });
+ });
+ 
+});
+</script>  HTML部分Code：<html><head><title>诡异的三级联动</title></head>
+<div id="sbox">bbbb</div>
+</html>
