@@ -13,9 +13,6 @@ public class Users implements Serializable {
 		return "Users [u_id=" + u_id + ", u_name=" + u_name + ", u_true_name=" + u_true_name + ", u_password="
 				+ u_password + "]";
 	}
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 8400791770790400198L;
 	private int u_id;
 	private String u_name;
@@ -47,5 +44,4 @@ public class Users implements Serializable {
 	public void setU_password(String u_password) {
 		this.u_password = u_password;
 	}
-	
 }

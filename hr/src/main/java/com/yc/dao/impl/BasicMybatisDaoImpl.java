@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import com.yc.dao.BasicMybatisDao;
 @Repository
 public class BasicMybatisDaoImpl<T> extends SqlSessionDaoSupport implements BasicMybatisDao<T> {
-	private String mapperLocation="mapper.";
+	private String mapperLocation="com.yc.mapper.";
 	@Override
 	@Resource(name="sqlSessionFactory")
 	public void setSqlSessionFactory(SqlSessionFactory sqlSessionFactory) {

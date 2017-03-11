@@ -7,10 +7,6 @@
 /*    已连接的数据源: 没有连接。                                                                          */
 /*    已连接的服务器: 没有连接。                                                                          */
 /*    已连接的数据库: 不适用。                                                                           */
-
-
-
-
 /* 创建新表 user。                                                                               */
 /* user : 用户表                                                                               */
 /* 	user_id : 主键，自动增长列                                                                      */
@@ -38,7 +34,7 @@ create table config_file_first_kind (
 	first_kind_name varchar(60) ,
 	first_kind_salary_id text ,
 	first_kind_sale_id text )  ;
-insert into config_file_first_kind values('01','集团','1','1');
+insert into config_file_first_kind(first_kind_id,first_kind_name,first_kind_salary_id,first_kind_sale_id) values('01','集团','1','1');
 
 /* 创建新表 config_file_second_kind。                                                            */
 /* config_file_second_kind : 二级机构设置                                                         */
@@ -58,8 +54,8 @@ create table config_file_second_kind (
 	second_kind_name varchar(60) ,
 	second_salary_id text ,
 	second_sale_id text );  
-insert into config_file_second_kind values('01','集团','01','软件公司','1','1');
-insert into config_file_second_kind values('01','集团','02','生物科技有限公司','1','1');
+insert into config_file_second_kind(first_kind_id,first_kind_name,second_kind_id,second_kind_name,second_salary_id,second_sale_id) values('01','集团','01','软件公司','1','1');
+insert into config_file_second_kind(first_kind_id,first_kind_name,second_kind_id,second_kind_name,second_salary_id,second_sale_id) values('01','集团','02','生物科技有限公司','1','1');
 
 
 
@@ -84,8 +80,8 @@ create table config_file_third_kind (
 	third_kind_name varchar(60) ,
 	third_kind_sale_id text ,
 	third_kind_is_retail char(2) ) ; 
-insert into config_file_third_kind values('01','集团','01','软件公司','01','外包组','1','否');
-insert into config_file_third_kind values('01','集团','02','生物科技有限公司','01','药店','1','是');
+insert into config_file_third_kind(first_kind_id,first_kind_name,second_kind_id,second_kind_name,third_kind_id,third_kind_name,third_kind_sale_id,third_kind_is_retail) values('01','集团','01','软件公司','01','外包组','1','否');
+insert into config_file_third_kind(first_kind_id,first_kind_name,second_kind_id,second_kind_name,third_kind_id,third_kind_name,third_kind_sale_id,third_kind_is_retail) values('01','集团','02','生物科技有限公司','01','药店','1','是');
 
 
 /* 创建新表 config_question_first_kind。                                                         */
@@ -98,8 +94,8 @@ create table config_question_first_kind (
 	first_kind_id char(2) ,
 	first_kind_name varchar(60) ) ; 
 
-insert into config_question_first_kind values('01','基础类');
-insert into config_question_first_kind values('02','技术类');
+insert into config_question_first_kind(first_kind_id,first_kind_name) values('01','基础类');
+insert into config_question_first_kind(first_kind_id,first_kind_name) values('02','技术类');
 
 
 /* 创建新表 config_question_second_kind。                                                        */
@@ -116,10 +112,10 @@ create table config_question_second_kind (
 	second_kind_id char(2) ,
 	second_kind_name varchar(60) ) ; 
 
-insert into config_question_second_kind values('01','基础类','01','语言类');
-insert into config_question_second_kind values('01','基础类','02','管理类');
-insert into config_question_second_kind values('02','技术类','01','软件开发类');
-insert into config_question_second_kind values('02','技术类','02','生物制药类');
+insert into config_question_second_kind(first_kind_id,first_kind_name,second_kind_id,second_kind_name) values('01','基础类','01','语言类');
+insert into config_question_second_kind(first_kind_id,first_kind_name,second_kind_id,second_kind_name) values('01','基础类','02','管理类');
+insert into config_question_second_kind(first_kind_id,first_kind_name,second_kind_id,second_kind_name) values('02','技术类','01','软件开发类');
+insert into config_question_second_kind(first_kind_id,first_kind_name,second_kind_id,second_kind_name) values('02','技术类','02','生物制药类');
 
 
 
@@ -132,44 +128,44 @@ create table config_public_char (
 	pbc_id smallint auto_increment primary key,
 	attribute_kind varchar(60) ,
 	attribute_name varchar(60) ) ; 
-insert into config_public_char values('国籍','中国')
-insert into config_public_char values('国籍','美国')
-insert into config_public_char values('民族','汉族')
-insert into config_public_char values('民族','回族')
-insert into config_public_char values('宗教信仰','无')
-insert into config_public_char values('宗教信仰','佛教')
-insert into config_public_char values('政治面貌','党员')
-insert into config_public_char values('政治面貌','群众')
-insert into config_public_char values('教育年限','12')
-insert into config_public_char values('教育年限','16')
-insert into config_public_char values('学历','本科')
-insert into config_public_char values('学历','大专')
-insert into config_public_char values('专业','生物工程')
-insert into config_public_char values('专业','计算机')
-insert into config_public_char values('特长','数据库')
-insert into config_public_char values('特长','java')
-insert into config_public_char values('爱好','篮球')
-insert into config_public_char values('爱好','舞蹈')
-insert into config_public_char values('培训项目','英语')
-insert into config_public_char values('培训项目','管理')
-insert into config_public_char values('培训成绩','A')
-insert into config_public_char values('培训成绩','B')
-insert into config_public_char values('奖励项目','技术攻关')
-insert into config_public_char values('奖励项目','销售绩效')
-insert into config_public_char values('奖励等级','A')
-insert into config_public_char values('奖励等级','B')
-insert into config_public_char values('职称','工程师')
-insert into config_public_char values('职称','经理')
-insert into config_public_char values('职称','助理')
-insert into config_public_char values('职称','教授')
-insert into config_public_char values('职称','讲师')
-insert into config_public_char values('职称','技术支持')
-insert into config_public_char values('薪酬设置','出差补助')
-insert into config_public_char values('薪酬设置','交通补贴')
-insert into config_public_char values('薪酬设置','住房补贴')
-insert into config_public_char values('薪酬设置','基本工资')
-insert into config_public_char values('薪酬设置','年终奖')
-insert into config_public_char values('薪酬设置','误餐补助')
+insert into config_public_char(attribute_kind,attribute_name) values('国籍','中国')
+insert into config_public_char(attribute_kind,attribute_name) values('国籍','美国')
+insert into config_public_char(attribute_kind,attribute_name) values('民族','汉族')
+insert into config_public_char(attribute_kind,attribute_name) values('民族','回族')
+insert into config_public_char(attribute_kind,attribute_name) values('宗教信仰','无')
+insert into config_public_char(attribute_kind,attribute_name) values('宗教信仰','佛教')
+insert into config_public_char(attribute_kind,attribute_name) values('政治面貌','党员')
+insert into config_public_char(attribute_kind,attribute_name) values('政治面貌','群众')
+insert into config_public_char(attribute_kind,attribute_name) values('教育年限','12')
+insert into config_public_char(attribute_kind,attribute_name) values('教育年限','16')
+insert into config_public_char(attribute_kind,attribute_name) values('学历','本科')
+insert into config_public_char(attribute_kind,attribute_name) values('学历','大专')
+insert into config_public_char(attribute_kind,attribute_name) values('专业','生物工程')
+insert into config_public_char(attribute_kind,attribute_name) values('专业','计算机')
+insert into config_public_char(attribute_kind,attribute_name) values('特长','数据库')
+insert into config_public_char(attribute_kind,attribute_name) values('特长','java')
+insert into config_public_char(attribute_kind,attribute_name) values('爱好','篮球')
+insert into config_public_char(attribute_kind,attribute_name) values('爱好','舞蹈')
+insert into config_public_char(attribute_kind,attribute_name) values('培训项目','英语')
+insert into config_public_char(attribute_kind,attribute_name) values('培训项目','管理')
+insert into config_public_char(attribute_kind,attribute_name) values('培训成绩','A')
+insert into config_public_char(attribute_kind,attribute_name) values('培训成绩','B')
+insert into config_public_char(attribute_kind,attribute_name) values('奖励项目','技术攻关')
+insert into config_public_char(attribute_kind,attribute_name) values('奖励项目','销售绩效')
+insert into config_public_char(attribute_kind,attribute_name) values('奖励等级','A')
+insert into config_public_char(attribute_kind,attribute_name) values('奖励等级','B')
+insert into config_public_char(attribute_kind,attribute_name) values('职称','工程师')
+insert into config_public_char(attribute_kind,attribute_name) values('职称','经理')
+insert into config_public_char(attribute_kind,attribute_name) values('职称','助理')
+insert into config_public_char(attribute_kind,attribute_name) values('职称','教授')
+insert into config_public_char(attribute_kind,attribute_name) values('职称','讲师')
+insert into config_public_char(attribute_kind,attribute_name) values('职称','技术支持')
+insert into config_public_char(attribute_kind,attribute_name) values('薪酬设置','出差补助')
+insert into config_public_char(attribute_kind,attribute_name) values('薪酬设置','交通补贴')
+insert into config_public_char(attribute_kind,attribute_name) values('薪酬设置','住房补贴')
+insert into config_public_char(attribute_kind,attribute_name) values('薪酬设置','基本工资')
+insert into config_public_char(attribute_kind,attribute_name) values('薪酬设置','年终奖')
+insert into config_public_char(attribute_kind,attribute_name) values('薪酬设置','误餐补助')
 
 
 
@@ -188,71 +184,71 @@ create table config_primary_key (
 	primary_key_status bit null) ; 
 insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','firstKindName','I机机构名称',1)
 insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','secondKindName','II机机构名称',1)
-insert into config_primary_key values('HumanFile','thirdKindName','III机机构名称',1)
-insert into config_primary_key values('HumanFile','humanId','档案编号',1)
-insert into config_primary_key values('HumanFile','humanName','姓名',1)
-insert into config_primary_key values('HumanFile','humanAddress','住址',1)
-insert into config_primary_key values('HumanFile','humanPostcode','邮编',1)
-insert into config_primary_key values('HumanFile','humanProDesignation','职称',1)
-insert into config_primary_key values('HumanFile','humanMajorKindName','职位分类名称',1)
-insert into config_primary_key values('HumanFile','hunmaMajorName','职位名称',1)
-insert into config_primary_key values('HumanFile','humanBank','开户银行',1)
-insert into config_primary_key values('HumanFile','humanAccount','银行帐号',1)
-insert into config_primary_key values('HumanFile','humanTelephone','电话',1)
-insert into config_primary_key values('HumanFile','humanMobilephone','手机号码',1)
-insert into config_primary_key values('HumanFile','humanEmail','E-mail',1)
-insert into config_primary_key values('HumanFile','humanHobby','爱好',1)
-insert into config_primary_key values('HumanFile','humanSpeciality','特长',1)
-insert into config_primary_key values('HumanFile','humanSex','性别',1)
-insert into config_primary_key values('HumanFile','humanReligion','宗教信仰',1)
-insert into config_primary_key values('HumanFile','humanParty','政治面貌',1)
-insert into config_primary_key values('HumanFile','humanNationality','国籍',1)
-insert into config_primary_key values('HumanFile','humanRace','民族',1)
-insert into config_primary_key values('HumanFile','humanBirthday','生日',1)
-insert into config_primary_key values('HumanFile','humanBirthplace','出生地',1)
-insert into config_primary_key values('HumanFile','humanAge','年龄',1)
-insert into config_primary_key values('HumanFile','humanEducatedDegree','学历',1)
-insert into config_primary_key values('HumanFile','humanEducatedYears','教育年限',1)
-insert into config_primary_key values('HumanFile','humanEducatedMajor','专业',1)
-insert into config_primary_key values('HumanFile','humanSocietySecurityId','社会保障号码',1)
-insert into config_primary_key values('HumanFile','humanIdCard','身份证号码',1)
-insert into config_primary_key values('HumanFile','salaryStandardId','薪酬标准编号',1)
-insert into config_primary_key values('HumanFile','salaryStandardName','薪酬标准',1)
-insert into config_primary_key values('HumanFile','majorChangeAmount','调动次数',1)
-insert into config_primary_key values('HumanFile','bonusAmount','激励次数',1)
-insert into config_primary_key values('HumanFile','trainingAmount','培训次数',1)
-insert into config_primary_key values('HumanFile','fileChangAmount','档案变更次数',1)
-insert into config_primary_key values('HumanFile','remark','备注',1)
-insert into config_primary_key values('HumanFile','humanHistroyRecords','简历',1)
-insert into config_primary_key values('HumanFile','humanFamilyMembership','家庭关系',1)
-insert into config_primary_key values('HumanFile','register','登记人',1)
-insert into config_primary_key values('SalaryStandard','standardId','薪酬标准编号',1)
-insert into config_primary_key values('SalaryStandard','standardName','薪酬标准名称',1)
-insert into config_primary_key values('SalaryStandard','designer','设计人',1)
-insert into config_primary_key values('SalaryGrant','salaryStandardId','薪酬标准编号',1)
-insert into config_primary_key values('SalaryGrant','salaryGrantId','薪酬发放编号',1)
-insert into config_primary_key values('Bonus','majorKindName','职位分类名称',1)
-insert into config_primary_key values('Bonus','majorName','职位名称',1)
-insert into config_primary_key values('Bonus','humanId','员工编号',1)
-insert into config_primary_key values('Bonus','humanName','职员工姓名',1)
-insert into config_primary_key values('Bonus','bonusItem','激励项目',1)
-insert into config_primary_key values('Bonus','bonusDegree','激励等级',1)
-insert into config_primary_key values('Bonus','remark','备注',1)
-insert into config_primary_key values('Training','majorKindName','职位分类名称',1)
-insert into config_primary_key values('Training','majorName','职位名称',1)
-insert into config_primary_key values('Training','humanId','员工编号',1)
-insert into config_primary_key values('Training','humanName','职员工姓名',1)
-insert into config_primary_key values('Training','trainingItem','培训项目',1)
-insert into config_primary_key values('Training','trainingDegree','培训等级',1)
-insert into config_primary_key values('Training','remark','备注',1)
-insert into config_primary_key values('MajorChange','firstKindName','I机机构',1)
-insert into config_primary_key values('MajorChange','secondKindName','II机机构',1)
-insert into config_primary_key values('MajorChange','thirdKindName','III机机构',1)
-insert into config_primary_key values('MajorChange','majorKindName','职位分类',1)
-insert into config_primary_key values('MajorChange','majorName','职位',1)
-insert into config_primary_key values('MajorChange','humanId','员工编号',1)
-insert into config_primary_key values('MajorChange','humanName','员工姓名',1)
-insert into config_primary_key values('MajorChange','changeReason','调动原因',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','thirdKindName','III机机构名称',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','humanId','档案编号',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','humanName','姓名',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','humanAddress','住址',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','humanPostcode','邮编',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','humanProDesignation','职称',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','humanMajorKindName','职位分类名称',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','hunmaMajorName','职位名称',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','humanBank','开户银行',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','humanAccount','银行帐号',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','humanTelephone','电话',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','humanMobilephone','手机号码',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','humanEmail','E-mail',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','humanHobby','爱好',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','humanSpeciality','特长',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','humanSex','性别',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','humanReligion','宗教信仰',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','humanParty','政治面貌',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','humanNationality','国籍',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','humanRace','民族',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','humanBirthday','生日',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','humanBirthplace','出生地',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','humanAge','年龄',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','humanEducatedDegree','学历',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','humanEducatedYears','教育年限',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','humanEducatedMajor','专业',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','humanSocietySecurityId','社会保障号码',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','humanIdCard','身份证号码',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','salaryStandardId','薪酬标准编号',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','salaryStandardName','薪酬标准',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','majorChangeAmount','调动次数',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','bonusAmount','激励次数',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','trainingAmount','培训次数',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','fileChangAmount','档案变更次数',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','remark','备注',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','humanHistroyRecords','简历',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','humanFamilyMembership','家庭关系',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('HumanFile','register','登记人',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('SalaryStandard','standardId','薪酬标准编号',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('SalaryStandard','standardName','薪酬标准名称',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('SalaryStandard','designer','设计人',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('SalaryGrant','salaryStandardId','薪酬标准编号',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('SalaryGrant','salaryGrantId','薪酬发放编号',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('Bonus','majorKindName','职位分类名称',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('Bonus','majorName','职位名称',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('Bonus','humanId','员工编号',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('Bonus','humanName','职员工姓名',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('Bonus','bonusItem','激励项目',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('Bonus','bonusDegree','激励等级',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('Bonus','remark','备注',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('Training','majorKindName','职位分类名称',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('Training','majorName','职位名称',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('Training','humanId','员工编号',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('Training','humanName','职员工姓名',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('Training','trainingItem','培训项目',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('Training','trainingDegree','培训等级',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('Training','remark','备注',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('MajorChange','firstKindName','I机机构',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('MajorChange','secondKindName','II机机构',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('MajorChange','thirdKindName','III机机构',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('MajorChange','majorKindName','职位分类',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('MajorChange','majorName','职位',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('MajorChange','humanId','员工编号',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('MajorChange','humanName','员工姓名',1)
+insert into config_primary_key(primary_key_table,primary_key,key_name,primary_key_status) values('MajorChange','changeReason','调动原因',1)
 
 /* 创建新表 config_major_kind。                                                                  */
 /* config_major_kind : 职位分类设置                                                               */
@@ -265,10 +261,10 @@ create table config_major_kind (
 	major_kind_name varchar(60) null);  
 
 
-insert into config_major_kind values('01','销售')
-insert into config_major_kind values('02','软件开发')
-insert into config_major_kind values('03','人力资源')
-insert into config_major_kind values('04','生产部')
+insert into config_major_kind(major_kind_id,major_kind_name) values('01','销售')
+insert into config_major_kind(major_kind_id,major_kind_name) values('02','软件开发')
+insert into config_major_kind(major_kind_id,major_kind_name) values('03','人力资源')
+insert into config_major_kind(major_kind_id,major_kind_name) values('04','生产部')
 
 
 /* 创建新表 config_major。                                                                       */
@@ -290,14 +286,14 @@ create table config_major (
 
 
 
-insert into config_major values('01','销售','01','区域经理',0)
-insert into config_major values('01','销售','02','总经理',0)
-insert into config_major values('02','软件开发','01','项目经理',0)
-insert into config_major values('02','软件开发','02','程序员',0)
-insert into config_major values('03','人力资源','01','人事经理',0)
-insert into config_major values('03','人力资源','02','专员',0)
-insert into config_major values('04','生产部','01','主任',0)
-insert into config_major values('04','生产部','02','技术工人',0)
+insert into config_major(major_kind_id,major_kind_name,major_id,major_name,test_amount) values('01','销售','01','区域经理',0)
+insert into config_major(major_kind_id,major_kind_name,major_id,major_name,test_amount) values('01','销售','02','总经理',0)
+insert into config_major(major_kind_id,major_kind_name,major_id,major_name,test_amount) values('02','软件开发','01','项目经理',0)
+insert into config_major(major_kind_id,major_kind_name,major_id,major_name,test_amount) values('02','软件开发','02','程序员',0)
+insert into config_major(major_kind_id,major_kind_name,major_id,major_name,test_amount) values('03','人力资源','01','人事经理',0)
+insert into config_major(major_kind_id,major_kind_name,major_id,major_name,test_amount) values('03','人力资源','02','专员',0)
+insert into config_major(major_kind_id,major_kind_name,major_id,major_name,test_amount) values('04','生产部','01','主任',0)
+insert into config_major(major_kind_id,major_kind_name,major_id,major_name,test_amount) values('04','生产部','02','技术工人',0)
 
 
 
@@ -695,7 +691,7 @@ create table training (
 	regist_time datetime null,
 	check_time datetime null,
 	checkstatus smallint null,
-	remark text null)  ;
+	remark text null);
 
 
 /* 创建新表 major_change。                                                                       */
