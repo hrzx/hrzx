@@ -69,7 +69,7 @@ import java.util.Date;
 /* 	"human_file_status" : 档案状态                                                                */  
 public class HumanFile implements Serializable {
 	private static final long serialVersionUID = -2214650236132938164L;
-	private int huf_id;
+	private Integer huf_id;
 	private String human_id;
 	private String first_kind_name;
 	private String first_kind_id;
@@ -100,9 +100,9 @@ public class HumanFile implements Serializable {
 	private String human_race;
 	private Date human_birthday;
 	private String human_birthplace;
-	private int human_age;
+	private Integer human_age;
 	private String human_educated_degree;
-	private int human_educated_years;
+	private Integer human_educated_years;
 	private String human_educated_major;
 	private String human_society_security_id;
 	private String human_id_card;
@@ -112,15 +112,15 @@ public class HumanFile implements Serializable {
 	private double salary_sum;
 	private double demand_salary_sum;
 	private double paid_salary_sum;
-	private int major_change_amount;
-	private int bonus_amount;
-	private int training_amount;
-	private int file_change_amount;
+	private Integer major_change_amount;
+	private Integer bonus_amount;
+	private Integer training_amount;
+	private Integer file_change_amount;
 	private String human_history_records;
 	private String human_family_membership;
 	private String human_picture;
 	private String attchment_name;
-	private int check_status;
+	private Integer check_status;
 	private String register;
 	private String checker;
 	private String changer;
@@ -131,10 +131,10 @@ public class HumanFile implements Serializable {
 	private Date delete_time;
 	private Date recovery_time;
 	private Boolean human_file_status;
-	public int getHuf_id() {
+	public Integer getHuf_id() {
 		return huf_id;
 	}
-	public void setHuf_id(int huf_id) {
+	public void setHuf_id(Integer huf_id) {
 		this.huf_id = huf_id;
 	}
 	public String getHuman_id() {
@@ -317,10 +317,10 @@ public class HumanFile implements Serializable {
 	public void setHuman_birthplace(String human_birthplace) {
 		this.human_birthplace = human_birthplace;
 	}
-	public int getHuman_age() {
+	public Integer getHuman_age() {
 		return human_age;
 	}
-	public void setHuman_age(int human_age) {
+	public void setHuman_age(Integer human_age) {
 		this.human_age = human_age;
 	}
 	public String getHuman_educated_degree() {
@@ -329,10 +329,10 @@ public class HumanFile implements Serializable {
 	public void setHuman_educated_degree(String human_educated_degree) {
 		this.human_educated_degree = human_educated_degree;
 	}
-	public int getHuman_educated_years() {
+	public Integer getHuman_educated_years() {
 		return human_educated_years;
 	}
-	public void setHuman_educated_years(int human_educated_years) {
+	public void setHuman_educated_years(Integer human_educated_years) {
 		this.human_educated_years = human_educated_years;
 	}
 	public String getHuman_educated_major() {
@@ -389,28 +389,28 @@ public class HumanFile implements Serializable {
 	public void setPaid_salary_sum(double paid_salary_sum) {
 		this.paid_salary_sum = paid_salary_sum;
 	}
-	public int getMajor_change_amount() {
+	public Integer getMajor_change_amount() {
 		return major_change_amount;
 	}
-	public void setMajor_change_amount(int major_change_amount) {
+	public void setMajor_change_amount(Integer major_change_amount) {
 		this.major_change_amount = major_change_amount;
 	}
-	public int getBonus_amount() {
+	public Integer getBonus_amount() {
 		return bonus_amount;
 	}
-	public void setBonus_amount(int bonus_amount) {
+	public void setBonus_amount(Integer bonus_amount) {
 		this.bonus_amount = bonus_amount;
 	}
-	public int getTraining_amount() {
+	public Integer getTraining_amount() {
 		return training_amount;
 	}
-	public void setTraining_amount(int training_amount) {
+	public void setTraining_amount(Integer training_amount) {
 		this.training_amount = training_amount;
 	}
-	public int getFile_change_amount() {
+	public Integer getFile_change_amount() {
 		return file_change_amount;
 	}
-	public void setFile_change_amount(int file_change_amount) {
+	public void setFile_change_amount(Integer file_change_amount) {
 		this.file_change_amount = file_change_amount;
 	}
 	public String getHuman_history_records() {
@@ -437,10 +437,10 @@ public class HumanFile implements Serializable {
 	public void setAttchment_name(String attchment_name) {
 		this.attchment_name = attchment_name;
 	}
-	public int getCheck_status() {
+	public Integer getCheck_status() {
 		return check_status;
 	}
-	public void setCheck_status(int check_status) {
+	public void setCheck_status(Integer check_status) {
 		this.check_status = check_status;
 	}
 	public String getRegister() {

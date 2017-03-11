@@ -11,13 +11,13 @@ public class ConfigQuestionFirstKind implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = -1705231000005531747L;
-	private int qfk_id;
+	private Integer qfk_id;
 	private String first_kind_id;
 	private String first_kind_name;
-	public int getQfk_id() {
+	public Integer getQfk_id() {
 		return qfk_id;
 	}
-	public void setQfk_id(int qfk_id) {
+	public void setQfk_id(Integer qfk_id) {
 		this.qfk_id = qfk_id;
 	}
 	public String getFirst_kind_id() {

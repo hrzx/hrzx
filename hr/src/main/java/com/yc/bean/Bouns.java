@@ -26,7 +26,7 @@ public class Bouns implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = -6428821680101677907L;
-	private int bon_id;
+	private Integer bon_id;
 	private String major_kind_id;
 	private String major_kind_name;
 	private String major_id;
@@ -41,12 +41,12 @@ public class Bouns implements Serializable {
 	private String checker;
 	private Date regist_time;
 	private Date check_time;
-	private int check_status;
+	private Integer check_status;
 	
-	public int getBon_id() {
+	public Integer getBon_id() {
 		return bon_id;
 	}
-	public void setBon_id(int bon_id) {
+	public void setBon_id(Integer bon_id) {
 		this.bon_id = bon_id;
 	}
 	public String getMajor_kind_id() {
@@ -133,7 +133,7 @@ public class Bouns implements Serializable {
 	public void setCheck_time(Date check_time) {
 		this.check_time = check_time;
 	}
-	public int getCheck_status() {
+	public Integer getCheck_status() {
 		return check_status;
 	}
 	public void setCheck_status(int check_status) {

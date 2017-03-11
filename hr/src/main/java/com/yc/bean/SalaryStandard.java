@@ -24,7 +24,7 @@ public class SalaryStandard implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = -5130906362831282971L;
-	private int ssd_id;
+	private Integer ssd_id;
 	private String standard_id;
 	private String standard_name;
 	private String designer;
@@ -35,14 +35,14 @@ public class SalaryStandard implements Serializable {
 	private Date check_time;
 	private Date change_time;
 	private double salary_sum;
-	private int check_status;
-	private int change_status;
+	private Integer check_status;
+	private Integer change_status;
 	private String check_comment;
 	private String remark;
-	public int getSsd_id() {
+	public Integer getSsd_id() {
 		return ssd_id;
 	}
-	public void setSsd_id(int ssd_id) {
+	public void setSsd_id(Integer ssd_id) {
 		this.ssd_id = ssd_id;
 	}
 	public String getStandard_id() {
@@ -105,16 +105,16 @@ public class SalaryStandard implements Serializable {
 	public void setSalary_sum(double salary_sum) {
 		this.salary_sum = salary_sum;
 	}
-	public int getCheck_status() {
+	public Integer getCheck_status() {
 		return check_status;
 	}
-	public void setCheck_status(int check_status) {
+	public void setCheck_status(Integer check_status) {
 		this.check_status = check_status;
 	}
-	public int getChange_status() {
+	public Integer getChange_status() {
 		return change_status;
 	}
-	public void setChange_status(int change_status) {
+	public void setChange_status(Integer change_status) {
 		this.change_status = change_status;
 	}
 	public String getCheck_comment() {

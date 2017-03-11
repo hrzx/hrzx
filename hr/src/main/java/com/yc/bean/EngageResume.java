@@ -43,8 +43,8 @@ import java.util.Date;
 /* 	"regist_time" : 登记时间                                                                      */
 /* 	"checker" : 复核人姓名                                                                         */
 /* 	"check_time" : 复核时间                                                                       */
-/* 	"interview_status" : 面试状态                                                                 */
-/* 	"total_points" : 总分                                                                       */
+/* 	"Integererview_status" : 面试状态                                                                 */
+/* 	"total_poIntegers" : 总分                                                                       */
 /* 	"test_amount" : 考试次数                                                                      */
 /* 	"test_checker" : 测试复核人                                                                    */
 /* 	"test_check_time" : 测试复核时间                                                                */
@@ -56,7 +56,7 @@ import java.util.Date;
 	"pass_checkComment":录用申请审核意见
 	"pass_passComment":录用申请审批意见                                                            */ 
 public class EngageResume implements Serializable {
-	private int res_id;
+	private Integer res_id;
 	private String human_name;
 	private String engage_type;
 	private String human_address;
@@ -77,9 +77,9 @@ public class EngageResume implements Serializable {
 	private String human_nationality;
 	private String human_race;
 	private Date human_birthday;
-	private int human_age;
+	private Integer human_age;
 	private String human_educated_degree;
-	private int human_educated_years;
+	private Integer human_educated_years;
 	private String human_educated_major;
 	private String human_college;
 	private String human_idcard;
@@ -90,27 +90,27 @@ public class EngageResume implements Serializable {
 	private String recomandation;
 	private String human_picture;
 	private String attchment_name;
-	private int check_status;
+	private Integer check_status;
 	private String register;
 	private Date regist_time;
 	private String checker;
 	private Date check_time;
-	private int interview_status;
-	private float total_points;
-	private int test_amount;
+	private Integer Integererview_status;
+	private float total_poIntegers;
+	private Integer test_amount;
 	private String test_checker;
 	private Date test_check_time;
 	private String pass_register;
 	private Date pass_regist_time;
 	private String pass_checker;
 	private Date pass_check_time;
-	private int pass_check_status;
+	private Integer pass_check_status;
 	private String pass_checkComment;
 	private String pass_passComment;
-	public int getRes_id() {
+	public Integer getRes_id() {
 		return res_id;
 	}
-	public void setRes_id(int res_id) {
+	public void setRes_id(Integer res_id) {
 		this.res_id = res_id;
 	}
 	public String getHuman_name() {
@@ -233,10 +233,10 @@ public class EngageResume implements Serializable {
 	public void setHuman_birthday(Date human_birthday) {
 		this.human_birthday = human_birthday;
 	}
-	public int getHuman_age() {
+	public Integer getHuman_age() {
 		return human_age;
 	}
-	public void setHuman_age(int human_age) {
+	public void setHuman_age(Integer human_age) {
 		this.human_age = human_age;
 	}
 	public String getHuman_educated_degree() {
@@ -245,10 +245,10 @@ public class EngageResume implements Serializable {
 	public void setHuman_educated_degree(String human_educated_degree) {
 		this.human_educated_degree = human_educated_degree;
 	}
-	public int getHuman_educated_years() {
+	public Integer getHuman_educated_years() {
 		return human_educated_years;
 	}
-	public void setHuman_educated_years(int human_educated_years) {
+	public void setHuman_educated_years(Integer human_educated_years) {
 		this.human_educated_years = human_educated_years;
 	}
 	public String getHuman_educated_major() {
@@ -311,10 +311,10 @@ public class EngageResume implements Serializable {
 	public void setAttchment_name(String attchment_name) {
 		this.attchment_name = attchment_name;
 	}
-	public int getCheck_status() {
+	public Integer getCheck_status() {
 		return check_status;
 	}
-	public void setCheck_status(int check_status) {
+	public void setCheck_status(Integer check_status) {
 		this.check_status = check_status;
 	}
 	public String getRegister() {
@@ -341,22 +341,22 @@ public class EngageResume implements Serializable {
 	public void setCheck_time(Date check_time) {
 		this.check_time = check_time;
 	}
-	public int getInterview_status() {
-		return interview_status;
+	public Integer getIntegererview_status() {
+		return Integererview_status;
 	}
-	public void setInterview_status(int interview_status) {
-		this.interview_status = interview_status;
+	public void setIntegererview_status(Integer Integererview_status) {
+		this.Integererview_status = Integererview_status;
 	}
-	public float getTotal_points() {
-		return total_points;
+	public float getTotal_poIntegers() {
+		return total_poIntegers;
 	}
-	public void setTotal_points(float total_points) {
-		this.total_points = total_points;
+	public void setTotal_poIntegers(float total_poIntegers) {
+		this.total_poIntegers = total_poIntegers;
 	}
-	public int getTest_amount() {
+	public Integer getTest_amount() {
 		return test_amount;
 	}
-	public void setTest_amount(int test_amount) {
+	public void setTest_amount(Integer test_amount) {
 		this.test_amount = test_amount;
 	}
 	public String getTest_checker() {
@@ -395,10 +395,10 @@ public class EngageResume implements Serializable {
 	public void setPass_check_time(Date pass_check_time) {
 		this.pass_check_time = pass_check_time;
 	}
-	public int getPass_check_status() {
+	public Integer getPass_check_status() {
 		return pass_check_status;
 	}
-	public void setPass_check_status(int pass_check_status) {
+	public void setPass_check_status(Integer pass_check_status) {
 		this.pass_check_status = pass_check_status;
 	}
 	public String getPass_checkComment() {

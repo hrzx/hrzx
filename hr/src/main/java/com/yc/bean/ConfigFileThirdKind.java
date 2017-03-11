@@ -17,7 +17,7 @@ public class ConfigFileThirdKind implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 4200356112158849025L;
-	private int ftk_id;
+	private Integer ftk_id;
 	private String first_kind_id;
 	private String first_kind_name;
 	private String second_kind_id;
@@ -26,10 +26,10 @@ public class ConfigFileThirdKind implements Serializable {
 	private String third_kind_name;
 	private String third_sale_id;
 	private String third_kind_is_retail;
-	public int getFtk_id() {
+	public Integer getFtk_id() {
 		return ftk_id;
 	}
-	public void setFtk_id(int ftk_id) {
+	public void setFtk_id(Integer ftk_id) {
 		this.ftk_id = ftk_id;
 	}
 	public String getFirst_kind_id() {

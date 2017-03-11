@@ -17,7 +17,7 @@ public class SalaryGrantDetails implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = -1039375313700250803L;
-	private int grd_id;
+	private Integer grd_id;
 	private String salary_grant_id;
 	private String human_id;
 	private String human_name;
@@ -26,10 +26,10 @@ public class SalaryGrantDetails implements Serializable {
 	private double deduct_sum;
 	private double salary_standard_sum;
 	private double salary_paid_sum;
-	public int getGrd_id() {
+	public Integer getGrd_id() {
 		return grd_id;
 	}
-	public void setGrd_id(int grd_id) {
+	public void setGrd_id(Integer grd_id) {
 		this.grd_id = grd_id;
 	}
 	public String getSalary_grant_id() {

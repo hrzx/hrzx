@@ -46,7 +46,7 @@ public class MajorChange  implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 7822580708134957316L;
-	private int mch_id;
+	private Integer mch_id;
 	private String first_kind_id;
 	private String first_kind_name;
 	private String second_kind_id;
@@ -77,15 +77,15 @@ public class MajorChange  implements Serializable {
 	private double new_salary_sum;
 	private String change_reason;
 	private String check_reason;
-	private int check_status;
+	private Integer check_status;
 	private String register;
 	private String 	checker;
 	private Date regist_time;
 	private Date check_time;
-	public int getMch_id() {
+	public Integer getMch_id() {
 		return mch_id;
 	}
-	public void setMch_id(int mch_id) {
+	public void setMch_id(Integer mch_id) {
 		this.mch_id = mch_id;
 	}
 	public String getFirst_kind_id() {
@@ -268,10 +268,10 @@ public class MajorChange  implements Serializable {
 	public void setCheck_reason(String check_reason) {
 		this.check_reason = check_reason;
 	}
-	public int getCheck_status() {
+	public Integer getCheck_status() {
 		return check_status;
 	}
-	public void setCheck_status(int check_status) {
+	public void setCheck_status(Integer check_status) {
 		this.check_status = check_status;
 	}
 	public String getRegister() {
